@@ -397,43 +397,81 @@ p {
 
 /* Campus Section End */
 
-/* Facilities Section Start */
+/* novedad Section Start */
 
-.facilities {
-  width: 80%;
+.novedad {
+  width: 100%;
   margin: auto;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  max-width: 100%;
 }
+#correo {
+  width: 50%;
+  margin: auto;
+  max-width: 100%;
 
-.facilities-col {
-  flex-basis: 31%;
-  border-radius: 10px;
-  margin-bottom: 5%;
-  text-align: left;
 }
-
-.facilities-col img {
+.form-nov p {
+  color: white;
+}
+.form-nov input[type="email"] {
   width: 100%;
-  transition: 0.5s;
-  border-radius: 10px;
+  padding: 20px;
+  font-size: 20px;
+  border: 5px solid red;
 }
-
-.facilities-col img:hover {
-  box-shadow: 0 0 20px 10px rgba(54, 58, 121, 0.2);
+.input_check {
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
 }
-
-.facilities-col p {
-  padding: 0;
+.input_check label {
+  color: white;
 }
-
-.facilities-col h3 {
-  text-align: left;
-  margin-top: 16px;
-  margin-bottom: 15px;
+.input_check a {
+  color: red;
 }
+.buttonform {
+  max-width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  width: 10%;
+  border-radius: 20px;
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+  font-size: 15px;
+}
+.buttonform:hover{
+  background-color: #24f8c7;
+  border: 1px solid black;
+}
+@media only screen and (max-width: 1024px) {
+  #correo {
+    width: 100%;
+    margin: auto;
+    max-width: 100%;
+  }
 
-/* Facilities Section End */
+  .form-nov input[type="email"] {
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+  }
+  .input_check {
+    width: 100%;
+
+  }
+  .input_check a {
+    font-size: 15px;
+  }
+  .buttonform {
+    width: 50%;
+  }
+}
+/* novedad Section End */
 
 /* Slider */
 .slider {
