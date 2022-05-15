@@ -795,6 +795,7 @@
         width: 100%;
         text-align: center;
         padding: 30px 0;
+        clear: both;
     }
     
     .footer a {
@@ -866,8 +867,38 @@
     .about_influencias {
         max-width: 100%;
         width: 100%;
-        padding-bottom: 20px;
         background-color: white;
+    }
+    /* About Us Section End */
+    /* ----------------------------- */
+    /* Aspectos Section Start */
+    
+    .contenido_aspectos {
+        width: 100%;
+        max-width: 100%;
+        background-color: white;
+    }
+    
+    .aspectos {
+        padding-bottom: 10px;
+    }
+    
+    #imagenAspec {
+        float: left;
+        padding: 10px;
+        width: 12%;
+    }
+    
+    .aspectos p,
+    h2 {
+        width: 98%;
+        max-width: 100%;
+        padding: 10px;
+        text-align: justify;
+    }
+    
+    .aspectos h2 {
+        color: #24f8c7;
     }
     
     @media (max-width: 1280px) {
@@ -891,6 +922,17 @@
             width: 100%;
             padding-bottom: 20px;
             background-color: white;
+        }
+        .aspectos #imagenAspec {
+            width: 40%;
+            margin: auto;
+            display: block;
+            float: none;
+        }
+        .aspectos h2,
+        p {
+            width: 100%;
+            text-align: center;
         }
     }
     /*     
