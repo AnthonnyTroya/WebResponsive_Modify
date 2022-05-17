@@ -1,3 +1,4 @@
+/*Style  General */
 * {
   margin: 0;
   padding: 0;
@@ -5,11 +6,136 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+h1 {
+  font-size: 46px;
+  font-weight: 800;
+  margin: 15px 0;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #2fb4cc;
+}
 
+p {
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+/* VIDEO BG */
+.cta-box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  color: #fff;
+  margin: 50px 0;
+}
+.video-bg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+.video-bg:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #080808cf;
+  z-index: 1;
+  opacity: 0.85;
+}
+.video-bg video {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.content-section {
+  width: 100%;
+  display: block;
+  padding: 220px 0;
+  position: relative;
+  background-size: cover !important;
+  background-position: center !important;
+}
+.content-section .container {
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 1280px) {
+  .video-bg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .video-bg:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  .video-bg video {
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .cta-box h2 {
+    font-size: 32px;
+  }
+}
+/* CTA BOX */
+.cta-box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+}
+.cta-box h6 {
+  width: 100%;
+  display: block;
+
+  font-weight: 200;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+.cta-box h2 {
+  width: 100%;
+  display: block;
+  color: rgb(255, 255, 255);
+  margin-bottom: 0;
+  font-size: 42px;
+  font-family: "Cinzel", serif;
+}
+.cta-box .custom-button {
+  margin: 0 auto;
+  margin-top: 20px;
+  color: rgb(255, 255, 255);
+}
+.cta-box .custom-button:hover {
+  color: #2fb4cc;
+}
+.cta-box .custom-button:hover:before {
+  border-color: #fff;
+}
+/* Cuerpo del Html */
 body {
   background-color: #222;
 }
 
+/* Cabecera */
 .header {
   min-height: 100vh;
   width: 100%;
@@ -20,8 +146,8 @@ body {
   background-size: cover;
   position: relative;
 }
-/* Menu Nav Principañ */
 
+/* Menu Nav Principal */
 nav {
   background-image: linear-gradient(#000000c4, #0507137b);
   display: flex;
@@ -29,7 +155,7 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-
+/* -----------Logo----------- */
 nav .logo {
   text-decoration: none;
   font-size: 24px;
@@ -42,7 +168,7 @@ nav .fab {
   /* color: #5236f4; */
   color: #f82424;
 }
-
+/* -----------Links del menu----------- */
 .nav-links {
   flex: 1;
   text-align: right;
@@ -130,31 +256,6 @@ nav .fa {
   display: none;
 }
 
-@media only screen and (min-width: 375px) and (max-width: 768px) {
-  .slider,
-  .slider ul,
-  .slider img {
-    height: 100%;
-  }
-  .content-sec {
-    width: 100%;
-    height: 600px;
-    max-height: 600px;
-  }
-  .content-sec h1 {
-    padding: 10px;
-    font-size: 35px;
-  }
-  .content-sec p {
-    width: 100%;
-    font-size: 17px;
-  }
-  .content-sec #img-col {
-    width: 100%;
-    height: 30%;
-    margin: auto;
-  }
-}
 /* Responsive Navbar Section Start */
 
 @media (max-width: 700px) {
@@ -204,22 +305,6 @@ nav .fa {
   padding-top: 20px;
 }
 
-h1 {
-  font-size: 46px;
-  font-weight: 800;
-  margin: 15px 0;
-  line-height: 50px;
-  text-transform: uppercase;
-  color: #2fb4cc;
-}
-
-p {
-  color: #777;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 22px;
-  padding: 10px;
-}
 /* cards */
 
 .container-card {
@@ -329,8 +414,7 @@ p {
   }
 }
 /* Programs Section End */
-/* _------------------------------------_ */
-/* _------------------------------------_ */
+
 /* Campus Section Start */
 
 .campus {
@@ -410,8 +494,7 @@ p {
   }
 }
 /* Campus Section End */
-/* _------------------------------------_ */
-/* _------------------------------------_ */
+
 /* novedad Section Start */
 
 .novedad {
@@ -492,8 +575,7 @@ p {
   }
 }
 /* novedad Section End */
-/* _------------------------------------_ */
-/* _------------------------------------_ */
+
 /* comics Section Start */
 
 .comics {
@@ -621,7 +703,6 @@ p {
   width: 80%;
   box-shadow: 10px 5px 5px black;
 }
-/* Segundo */
 
 .contentComic1 {
   width: 50%;
@@ -702,8 +783,7 @@ p {
   }
 }
 /* comics Section End */
-/* _------------------------------------_ */
-/* _------------------------------------_ */
+
 /* Slider */
 
 .slider {
@@ -753,7 +833,33 @@ p {
     margin-left: -300%;
   }
 }
-/* Call To Action Section Start */
+/* -----------Responsive Slider----------- */
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .slider,
+  .slider ul,
+  .slider img {
+    height: 100%;
+  }
+  .content-sec {
+    width: 100%;
+    height: 600px;
+    max-height: 600px;
+  }
+  .content-sec h1 {
+    padding: 10px;
+    font-size: 35px;
+  }
+  .content-sec p {
+    width: 100%;
+    font-size: 17px;
+  }
+  .content-sec #img-col {
+    width: 100%;
+    height: 30%;
+    margin: auto;
+  }
+}
+
 /* _------------------------------------_ */
 
 .cta {
@@ -831,14 +937,15 @@ hr {
   border: 0.01px solid #7777772a;
 }
 /* Footer Section End */
+/* ----------------------------------------------Index End--------------------------------------------- */
+
 /* About Us Section Start */
 
 .Sub-header {
-  height: 50vh;
+  height: 70vh;
   width: 100%;
   max-width: 100%;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
-    url(img/anime11.jpg);
+  background-image: url(img/anime11.jpg);
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -914,11 +1021,10 @@ h2 {
   width: 100%;
   max-width: 100%;
 }
-.galeria img{
-    width: 100%;
-    height: 300px;
+.galeria img {
+  width: 100%;
+  height: 300px;
 }
-
 
 .responsive {
   padding: 0 6px;
@@ -929,7 +1035,6 @@ h2 {
 @media only screen and (max-width: 1280px) {
   .responsive {
     width: 50%;
-    
   }
 }
 
@@ -939,13 +1044,11 @@ h2 {
   }
 }
 
-
 @media (max-width: 1280px) {
   .Sub-header {
     width: 100%;
     max-width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
-      url(img/anime11.jpg);
+    background-image: url(img/anime11.jpg);
   }
   .about-us {
     padding-bottom: 0;
@@ -973,6 +1076,29 @@ h2 {
 }
 
 /* About Us Section end */
+/* ----------------------------------------------About End--------------------------------------------- */
+
+/* Collections */
+
+.Sub-headerC {
+  height: 70vh;
+  width: 100%;
+  max-width: 100%;
+  background-image: url(img/anime12.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+
+@media (max-width: 1280px) {
+  .Sub-headerC {
+    width: 100%;
+    max-width: 100%;
+    background-image: url(img/anime12.jpg);
+  }
+}
+/* ----------------------------------------------Collections End--------------------------------------------- */
 /* Blog Section start */
 
 .blog-content {
