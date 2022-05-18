@@ -25,7 +25,6 @@ p {
 
 /* VIDEO BG */
 .cta-box {
-  
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -941,8 +940,7 @@ hr {
 /* Footer Section End */
 /* ----------------------------------------------Index End--------------------------------------------- */
 
-/* About Us Section Start */
-
+/* ----------------------------------------------About Start--------------------------------------------- */
 .Sub-header {
   height: 70vh;
   width: 100%;
@@ -1077,10 +1075,9 @@ h2 {
   }
 }
 
-/* About Us Section end */
 /* ----------------------------------------------About End--------------------------------------------- */
 
-/* Collections */
+/* ----------------------------------------------Collections Start--------------------------------------------- */
 
 .Sub-headerC {
   height: 70vh;
@@ -1097,29 +1094,29 @@ h2 {
   background: #007bff;
 }
 .wrapper {
-  margin: 10px;
-  max-width: 50%;
-  border: 1px solid;
+  margin: 10px auto;
+  max-width: 70%;
+  background-color: #0a0202;
 }
 .wrapper nav {
   display: flex;
   max-width: 100%;
   justify-content: center;
+  border-bottom: 1px solid white;
 }
 .wrapper .items {
   display: flex;
   max-width: 100%;
-  width: 100%;
+  width: 70%;
+  margin: auto;
   justify-content: space-between;
 }
 .items span {
-  padding: 7px 25px;
-  font-size: 18px;
+  padding: 10px 25px;
+  font-size: 20px;
   font-weight: 500;
   cursor: pointer;
   color: #007bff;
-  border-radius: 50px;
-  border: 2px solid #007bff;
   transition: all 0.3s ease;
 }
 .items span.active,
@@ -1212,7 +1209,6 @@ h2 {
 }
 #imgColl {
   width: 100%;
-
   border-radius: 0 0 3px 3px;
 }
 .shadow {
@@ -1227,12 +1223,6 @@ h2 {
 }
 .shadow.show {
   display: block;
-}
-
-.derecha {
-  width: 30%;
-  max-width: 100%;
-
 }
 
 @media (max-width: 1000px) {
@@ -1282,7 +1272,8 @@ h2 {
   }
 }
 /* ----------------------------------------------Collections End--------------------------------------------- */
-/* Blog Section start */
+
+/* ----------------------------------------------Blog Start--------------------------------------------- */
 
 .blog-content {
   width: 80%;
@@ -1376,27 +1367,57 @@ h2 {
     font-size: 24px;
   }
 }
-/* Comment Box Section End */
-/* Contact Us Section Start */
 
+/* ----------------------------------------------Blog End--------------------------------------------- */
+
+/* ----------------------------------------------Contact Start--------------------------------------------- */
+
+.Sub-headerCO {
+  height: 70vh;
+  width: 100%;
+  max-width: 100%;
+  background-image: url(img/anime13.jfif);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
 .loacation {
-  width: 80%;
+  width: 95%;
   margin: auto;
-  padding: 80px 0;
+  border: 1px solid white;
 }
 
 .loacation iframe {
   width: 100%;
+  max-width: 100%;
 }
-
+.location_dir {
+  width: 22%;
+  float: left;
+  margin: 10px;
+  float: right;
+}
+.location_dir h3 {
+  color: turquoise;
+}
+.location_dir p {
+  color: rgb(255, 255, 255);
+  letter-spacing: 2px;
+}
+.location_dir img {
+  width: 100%;
+  max-width: 100%;
+}
 .contact-us {
-  width: 80%;
-  margin: auto;
+  clear: both;
+  width: 90%;
+  max-width: 100%;
+  margin: 20px auto;
 }
 
 .content-col {
   flex-basis: 48%;
-  margin-bottom: 30px;
 }
 
 .content-col div {
@@ -1427,9 +1448,31 @@ h2 {
 .content-col textarea {
   width: 100%;
   padding: 15px;
+  display: flex;
   margin-bottom: 17px;
   border: 1px solid #ccc;
   outline: none;
   box-sizing: border-box;
+}
+@media (max-width:1280px){
+  
+.contact-us {
+  width: 100%;
+  max-width: 100%;
+}
+.content-col div .fa {
+  font-size: 18px;
+  color: #24f8c7;
+
+}
+
+
+.content-col div h5 {
+  font-size: 10px;
+  font-weight: 200;
+}
+.content-col div p{
+  font-size: 10px;
+}
 }
 /* Contact Us Section end */
