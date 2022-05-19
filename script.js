@@ -61,42 +61,40 @@ function preview(element) {
 }
 //Carrousel
 
-function App() {}
+const carrusel = document.querySelector(".carrusel-items");
 
-window.onclick = function (event) {
-  var app = new App();
-  window.app = app;
+let maxScrollLeft = carrusel.scrollWidth - carrusel.clientWidth;
+let intervalo = null;
+let step = 1;
+const start = () => {
+  intervalo = setInterval(function () {
+    carrusel.scrollLeft = carrusel.scrollLeft + step;
+    if (carrusel.scrollLeft === maxScrollLeft) {
+      step = step * -1;
+    } else if (carrusel.scrollLeft === 0) {
+      step = step * -1;
+    }
+  }, 10);
 };
 
-App.prototype.processingButton = function (event) {
-  const btn = event.currentTarget;
-  const slickList = event.currentTarget.parentNode;
-  const track = event.currentTarget.parentNode.querySelector("#track");
-  const slick = track.querySelectorAll(".slick");
-
-  const slickWidth = slick[0].offsetWidth;
-
-  const trackWidth = track.offsetWidth;
-  const listWidth = slickList.offsetWidth;
-
-  track.style.left == ""
-    ? (leftPosition = track.style.left = 0)
-    : (leftPosition = parseFloat(track.style.left.slice(0, -2) * -1));
-
-  btn.dataset.button == "button-prev"
-    ? prevAction(leftPosition, slickWidth, track)
-    : nextAction(leftPosition, trackWidth, listWidth, slickWidth, track);
+const stop = () => {
+  clearInterval(intervalo);
 };
 
-let prevAction = (leftPosition, slickWidth, track) => {
-  if (leftPosition > 0) {
-    console.log("entro 2");
-    track.style.left = `${-1 * (leftPosition - slickWidth)}px`;
-  }
-};
+carrusel.addEventListener("mouseover", () => {
+  stop();
+});
 
-let nextAction = (leftPosition, trackWidth, listWidth, slickWidth, track) => {
-  if (leftPosition < trackWidth - listWidth) {
-    track.style.left = `${-1 * (leftPosition + slickWidth)}px`;
-  }
-};
+carrusel.addEventListener("mouseout", () => {
+  start();
+});
+
+start();
+
+// login
+function openSearch() {
+  document.getElementById("myOverlay").style.display = "block";
+}
+function closeSearch() {
+  document.getElementById("myOverlay").style.display = "none";
+}

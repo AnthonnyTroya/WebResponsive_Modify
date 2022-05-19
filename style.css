@@ -259,7 +259,7 @@ nav .fa {
 
 /* Responsive Navbar Section Start */
 
-@media (max-width: 700px) {
+@media (max-width: 1280px) {
   .text_box h2 {
     font-size: 50px;
   }
@@ -643,7 +643,6 @@ nav .fa {
 .redes-sociales {
   position: absolute;
   bottom: 0;
-  /*prueba tambien con top:0; y mira tu proyecto*/
   left: 0;
   background: rgba(189, 32, 32, 0.7);
   height: 0%;
@@ -1094,14 +1093,13 @@ h2 {
 }
 .wrapper {
   margin: 10px auto;
-  max-width: 70%;
-  background-color: #0a0202;
+  max-width: 100%;
+  background-color: #222;
 }
 .wrapper nav {
   display: flex;
   max-width: 100%;
   justify-content: center;
-  border-bottom: 1px solid white;
 }
 .wrapper .items {
   display: flex;
@@ -1115,7 +1113,7 @@ h2 {
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
-  color: #007bff;
+  color: white;
   transition: all 0.3s ease;
 }
 .items span.active,
@@ -1250,9 +1248,7 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
   }
-  nav .items span {
-    margin: 5px;
-  }
+
   .gallery .image {
     width: 100%;
   }
@@ -1269,6 +1265,39 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
   }
+}
+.carrousel{
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+}
+.carrusel {
+height: 20vh;
+  display: flex;
+  align-items: center;
+}
+
+.carrusel-items {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+ 
+}
+
+.carrusel-item {
+  min-width: 300px;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.carrusel-item img {
+
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.carrusel-item:hover {
+  transform: scale(1.1);
 }
 /* ----------------------------------------------Collections End--------------------------------------------- */
 
@@ -1438,91 +1467,6 @@ h2 {
   }
 }
 
-.Carousel {
-  width: 100%;
-  max-width: 100%;
-  background-color: white;
-}
-
-/* images */
-
-.slick-list {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: fit-content;
-
-  padding: 10px 0px;
-  margin: 0px auto;
-  max-width: 90vw;
-  overflow: hidden;
-}
-.slick-track {
-  position: relative;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  transition: 0.5s ease-in-out;
-}
-.slick {
-  position: relative;
-  width: 300px;
-  padding: 0 18px;
-  float: left;
-  box-sizing: border-box;
-  display: flex;
-  height: 100%;
-}
-.slick h4 {
-  position: absolute;
-  z-index: 1;
-  font-size: 22px;
-  line-height: 23px;
-  color: #fff;
-  padding: 15px;
-}
-
-.slick a img {
-  object-fit: cover;
-  width: 100%;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
-  transition: 0.3s ease-in-out;
-}
-.slick a img:hover {
-  opacity: 0.85;
-}
-
-/* buttons */
-
-.slick-arrow {
-  border-radius: 30px;
-  background-color: #fff;
-  position: absolute;
-  z-index: 4;
-  width: 48px;
-  height: 48px;
-  text-align: center;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
-  border: 0;
-  cursor: pointer;
-}
-.slick-arrow:focus {
-  outline: 0;
-}
-.slick-arrow svg {
-  width: 12px;
-  height: 100%;
-  color: rgba(0, 0, 0, 0.7);
-}
-.slick-prev {
-  left: 0px;
-}
-.slick-next {
-  right: 0px;
-}
-
 /* ----------------------------------------------Exhibitions End--------------------------------------------- */
 
 /* ----------------------------------------------Contact Start--------------------------------------------- */
@@ -1611,35 +1555,98 @@ h2 {
   box-sizing: border-box;
 }
 @media (max-width: 1280px) {
-
   .contact-us .row {
     width: 100%;
     max-width: 100%;
     margin: 10px auto;
   }
-  
+
   .content-col {
     flex-basis: 50%;
     margin: auto;
   }
-  
-  
+
   .content-col div .fa {
     font-size: 18px;
   }
-  
+
   .content-col div h5 {
     font-size: 15px;
   }
-  
+
   .content-col input,
   .content-col textarea {
     width: 100%;
     max-width: 100%;
     padding: 20px;
     display: flex;
-    
   }
-  
 }
-/* Contact Us Section end */
+
+/* ----------------------------------------------Contact Start--------------------------------------------- */
+.openBtn {
+  background-color: #f1f1f1;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.openBtn:hover {
+  background: #bbb;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.8);
+}
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+.overlay input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+  outline: none;
+}
+.overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
+.overlay button {
+  float: right;
+  width: 21%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 20%;
+}
+.overlay button:hover {
+  background: #bbb;
+}
