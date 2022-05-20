@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple responsive owl carousel</title>
+	<style>
+        @charset "utf-8";
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			font-family: -webkit-pictograph;
+		}
+		main{
+			width: 100%;
+		
+			/*background: red;*/
+			margin: 10px auto;
+			position: relative;
+			padding: 5px 0;
+		}
+		main .text{
+			padding: 10px;
+			text-align: center;
+			/*font-size: 30px;*/
+			color: #554;
+		}
+		.text h1{
+			font-size: 50px;
+		}
+		.text p{
+			width: 60%;
+			padding: 5px;
+			margin: auto;
+			line-height: 30px;
+		}
+		main header{
+			width: 98%;
+			margin: 0 auto;
+			/*background: gray;*/
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-bottom: 2px solid #ddd;
+		}
+		header p span{
+			font-size: 40px;
+		    margin: 0 5px;
+		    cursor: pointer;
+		    color: #555;
+		     width: 30px;
+		    height: 30px;
+		    display: inline-block;
+		    line-height: 19px;
+		    text-align: center;
+		    border-radius: 3px;
+		}
+		header p span:hover{
+			background: #222;
+    		color: white;
+		}
+		section{
+			width: 98%;
+			/*background: red;*/
+			margin: 10px auto;
+			display: flex;
+			align-items: center;
+			overflow-x: auto;
+		}
+		section::-webkit-scrollbar{
+			display: none;
+		}
+		section .product{
+			min-width: 24%;
+			background: whitesmoke;
+			margin:  0 20px  0 0;
+			border-radius: 20px;
+			position: relative;
+			left: 0;
+			transition: 0.5s;
+		}
+		picture{
+            padding: 10px;
+            
+			/*background: green;*/
+			display: flex;
+			overflow: hidden;
+			margin-bottom: 20px;
+		}
+		picture img{
+            border-radius: 10px;
+			width: 100%;
+		}
+        .detail p{
+            text-align: center;
+            font-size: 20px;
+        }
+		@media (max-width: 1228px) {
+		
+			header h1{
+				font-size: 25px;
+			}
+			header p span{
+				font-size: 30px;
+			}
+			section .product {
+				min-width: 49%;
+				margin:  0 10px  0 0;
+			}
+		
+		}
+    </style>
+</head>
+<body>
+	<main>
+		
+		<header>
+			<h1>Animes Más Conocidos</h1>
+			<p>
+				<span>&#139;</span>
+				<span>&#155;</span>
+			</p>
+		</header>
+		<section>
+			<div class="product">
+				<picture>
+					<img src="img/animeF1.jfif" alt="">
+				</picture>
+				<div class="detail">
+					<p>
+						<b>Product One</b><br>
+						<small>Kimetsu no Yaiba, también conocida bajo su nombre en inglés Demon Slayer, es una serie de manga
+                            escrita e ilustrada por Koyoharu Gotōge, cuya publicación comenzó el 15 de febrero de 2016 en la
+                            revista semanal Shūkan Shōnen Jump de la editorial Shūeisha</small>
+					</p>
+				</div>
+			</div>
+            
+			<div class="product">
+				<picture>
+					<img src="img/animeF1.jfif" alt="">
+				</picture>
+				<div class="detail">
+					<p>
+						<b>Product One</b><br>
+						<small>New arrival</small>
+					</p>
+				</div>
+			</div>
+            
+			<div class="product">
+				<picture>
+					<img src="img/animeF1.jfif" alt="">
+				</picture>
+				<div class="detail">
+					<p>
+						<b>Product One</b><br>
+						<small>New arrival</small>
+					</p>
+				</div>
+			</div>
+            
+			<div class="product">
+				<picture>
+					<img src="img/animeF1.jfif" alt="">
+				</picture>
+				<div class="detail">
+					<p>
+						<b>Product One</b><br>
+						<small>New arrival</small>
+					</p>
+				</div>
+			</div>
+            
+			<div class="product">
+				<picture>
+					<img src="img/animeF1.jfif" alt="">
+				</picture>
+				<div class="detail">
+					<p>
+						<b>Product One</b><br>
+						<small>New arrival</small>
+					</p>
+				</div>
+			</div>
+            
+			<div class="product">
+				<picture>
+					<img src="img/animeF1.jfif" alt="">
+				</picture>
+				<div class="detail">
+					<p>
+						<b>Product One</b><br>
+						<small>New arrival</small>
+					</p>
+				</div>
+			</div>
+            
+			<div class="product">
+				<picture>
+					<img src="img/animeF1.jfif" alt="">
+				</picture>
+				<div class="detail">
+					<p>
+						<b>Product One</b><br>
+						<small>New arrival</small>
+					</p>
+				</div>
+			</div>
+            
+			<div class="product">
+				<picture>
+					<img src="img/animeF1.jfif" alt="">
+				</picture>
+				<div class="detail">
+					<p>
+						<b>Product One</b><br>
+						<small>New arrival</small>
+					</p>
+				</div>
+			</div>
+            
+			<div class="product">
+				<picture>
+					<img src="img/animeF1.jfif" alt="">
+				</picture>
+				<div class="detail">
+					<p>
+						<b>Product One</b><br>
+						<small>New arrival</small>
+					</p>
+				</div>
+			</div>
+            
+			<div class="product">
+				<picture>
+					<img src="img/animeF1.jfif" alt="">
+				</picture>
+				<div class="detail">
+					<p>
+						<b>Product One</b><br>
+						<small>New arrival</small>
+					</p>
+				</div>
+			</div>
+            
+			<div class="product">
+				<picture>
+					<img src="img/animeF1.jfif" alt="">
+				</picture>
+				<div class="detail">
+					<p>
+						<b>Product One</b><br>
+						<small>New arrival</small>
+					</p>
+				</div>
+			</div>
+            
+			<div class="product">
+				<picture>
+					<img src="img/animeF1.jfif" alt="">
+				</picture>
+				<div class="detail">
+					<p>
+						<b>Product One</b><br>
+						<small>New arrival</small>
+					</p>
+				</div>
+			</div>
+            
+			<div class="product">
+				<picture>
+					<img src="img/animeF1.jfif" alt="">
+				</picture>
+				<div class="detail">
+					<p>
+						<b>Product One</b><br>
+						<small>New arrival</small>
+					</p>
+				</div>
+			</div>
+            
+			<div class="product">
+				<picture>
+					<img src="img/animeF1.jfif" alt="">
+				</picture>
+				<div class="detail">
+					<p>
+						<b>Product One</b><br>
+						<small>New arrival</small>
+					</p>
+				</div>
+			</div>
+            
+			<div class="product">
+				<picture>
+					<img src="img/animeF1.jfif" alt="">
+				</picture>
+				<div class="detail">
+					<p>
+						<b>Product One</b><br>
+						<small>New arrival</small>
+					</p>
+				</div>
+			</div>
+		</section>
+	</main>
+
+</body>
+</html>
+<script >
+    let span = document.getElementsByTagName('span');
+	let product = document.getElementsByClassName('product')
+	let product_page = Math.ceil(product.length/4);
+	let l = 0;
+	let movePer = 25.34;
+	let maxMove = 203;
+	// mobile_view	
+	let mob_view = window.matchMedia("(max-width: 768px)");
+	if (mob_view.matches)
+	 {
+	 	movePer = 50.36;
+	 	maxMove = 504;
+	 }
+
+	let right_mover = ()=>{
+		l = l + movePer;
+		if (product == 1){l = 0; }
+		for(const i of product)
+		{
+			if (l > maxMove){l = l - movePer;}
+			i.style.left = '-' + l + '%';
+		}
+
+	}
+	let left_mover = ()=>{
+		l = l - movePer;
+		if (l<=0){l = 0;}
+		for(const i of product){
+			if (product_page>1){
+				i.style.left = '-' + l + '%';
+			}
+		}
+	}
+	span[1].onclick = ()=>{right_mover();}
+	span[0].onclick = ()=>{left_mover();}
+</script>
+</body>
+</html>

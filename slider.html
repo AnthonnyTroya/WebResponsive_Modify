@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS only Carousel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&display=swap");
+
+        body {
+            margin: 0;
+            height: calc(100vh - 8em);
+            font-family: 'Quicksand', sans-serif;
+            background: #006BB6;
+            color: #26282A;
+        }
+
+        p {
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 1em auto;
+            color: #FDB927;
+        }
+
+        .containerSlider {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .containerSlider .items {
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            animation: carouselAnim 10s infinite alternate linear;
+        }
+
+        .containerSlider .items .item {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            width: 300px;
+            background: #f9f9f9;
+            margin: 1em;
+            background: #FDB927;
+            border-radius: 1em;
+            box-shadow: 0px 0px 5px 0px rgba(38, 40, 42, 0.7);
+        }
+
+        .containerSlider .items .item p {
+            text-align: center;
+            color: #006BB6;
+        }
+
+        .containerSlider .items .item p.name {
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+
+        .containerSlider .items .item img.img-resp {
+            width: 100%;
+            height: auto;
+        }
+
+        .containerSlider .items .item .play-position {
+            display: flex;
+            flex-direction: row;
+            border-top: 2px solid #006BB6;
+            border-bottom: 2px solid #006BB6;
+            width: 100%;
+            justify-content: center;
+            position: relative;
+            margin: 0;
+        }
+
+        .containerSlider .items .item .play-position dt,
+        .containerSlider .items .item .play-position dd {
+            display: flex;
+            flex: 1;
+            text-align: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0.5em 0;
+        }
+
+        .containerSlider .items .item .play-position dt {
+            border-right: 2px solid #006BB6;
+        }
+
+        .containerSlider .items .item .bio {
+            padding-left: 0;
+            list-style-type: none;
+            display: flex;
+            width: 100%;
+            border-bottom: 2px solid #006BB6;
+            margin: 0;
+        }
+
+        .containerSlider .items .item .bio li {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            text-align: center;
+            border-right: 2px solid #006BB6;
+        }
+
+        .containerSlider .items .item .bio li:last-child {
+            border-right: none;
+        }
+
+        .containerSlider .items .item .bio li dl,
+        .containerSlider .items .item .bio li dt,
+        .containerSlider .items .item .bio li dd {
+            margin: 0;
+        }
+
+        .containerSlider .items .item .bio li dt,
+        .containerSlider .items .item .bio li dd {
+            padding: 0.3em 0;
+        }
+
+        .containerSlider .items .item .bio li dt {
+            border-bottom: 2px solid #006BB6;
+        }
+
+        .containerSlider .items .item .salary {
+            width: 100%;
+            font-weight: 700;
+            color: #006BB6;
+            margin: 0;
+            padding: 0.5em;
+        }
+
+        .containerSlider .items .item .salary dt,
+        .containerSlider .items .item .salary dd {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .containerSlider .items .item .salary dd {
+            font-size: 1.2em;
+        }
+
+        @keyframes carouselAnim {
+            from {
+                transform: translate(0, 0);
+            }
+
+            to {
+                transform: translate(calc(-200% + (5 * 300px)));
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .containerSlider .items {
+                animation: carouselAnim 30s infinite alternate linear;
+            }
+
+            @keyframes carouselAnim {
+                from {
+                    transform: translate(0, 0);
+                }
+
+                to {
+                    transform: translate(calc(-100% + (2 * 300px)));
+                }
+            }
+        }
+
+        .containerSlider .faders {
+            width: 100%;
+            position: absolute;
+            height: 100%;
+        }
+
+        .containerSlider .faders .left,
+        .containerSlider .faders .right {
+            width: 20%;
+            height: 100%;
+            position: absolute;
+            z-index: 200;
+            background: linear-gradient(to right, #006bb6 0%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        .containerSlider .faders .right {
+            right: 0;
+            background: linear-gradient(to left, #006bb6 0%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 1em 0;
+            text-align: center;
+            color: #FDB927;
+        }
+
+        footer a {
+            color: #FDB927;
+        }
+    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <div class="containerSlider">
+        <div class="faders">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+        <div class="items">
+            <div class="item">
+                <p class="name">Kimetsu No Yaibai</p>
+                <img class="img-resp" src="img/animeF1.jfif" alt="">
+                <p>Kimetsu no Yaiba, también conocida bajo su nombre en inglés Demon Slayer, es una serie de manga
+                    escrita e ilustrada por Koyoharu Gotōge, cuya publicación comenzó el 15 de febrero de 2016 en la
+                    revista semanal Shūkan Shōnen Jump de la editorial Shūeisha</p>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="item">
+                <p class="name">Boku no Hero</p>
+                <img class="img-resp" src="img/animeF2.jfif" alt="">
+                <p>My Hero Academia es una serie de manga escrita e ilustrada por Kōhei Horikoshi. Se basa en un
+                    one-shot realizado por el mismo autor y publicado en el quinto volumen del manga Ōmagadoki Dōbutsuen
+                    bajo el nombre de My Hero.​​</p>
+            </div>
+        </div>
+        <div class="items">
+            <div class="item">
+                <p class="name">One Piece</p>
+                <img class="img-resp" src="img/animeF3.jfif" alt="">
+                <p>One Piece es un manga escrito e ilustrado por el mangaka japonés Eiichirō Oda. Comenzó a publicarse
+                    en la revista japonesa Weekly Shōnen Jump el 22 de julio de 1997 y a la fecha se han publicado 102
+                    volúmenes.​</p>
+            </div>
+        </div>
+        <div class="items">
+            <div class="item">
+                <p class="name">Dragon Ball</p>
+                <img class="img-resp" src="img/animeF4.jfif" alt="">
+                <p>Dragon Ball es un manga escrito e ilustrado por Akira Toriyama. Fue publicado originalmente en la
+                    revista Shōnen Jump, de la editorial japonesa Shūeisha, entre 1984 y 1995.​</p>
+            </div>
+        </div>
+        <div class="items">
+            <div class="item">
+                <p class="name">Naruto</p>
+                <img class="img-resp" src="img/animeF5.jfif" alt="">
+                <p>Dragon Ball es un manga escrito e ilustrado por Akira Toriyama. Fue publicado originalmente en la
+                    revista Shōnen Jump, de la editorial japonesa Shūeisha, entre 1984 y 1995.​</p>
+            </div>
+        </div>
+        <div class="items">
+            <div class="item">
+                <p class="name">Jujutsu Kaisen</p>
+                <img class="img-resp" src="img/animeF6.jfif" alt="">
+                <p>Dragon Ball es un manga escrito e ilustrado por Akira Toriyama. Fue publicado originalmente en la
+                    revista Shōnen Jump, de la editorial japonesa Shūeisha, entre 1984 y 1995.​</p>
+            </div>
+        </div>
+        <div class="items">
+            <div class="item">
+                <p class="name">Nantsu no Tazai</p>
+                <img class="img-resp" src="img/animeF7.jfif" alt="">
+                <p>Dragon Ball es un manga escrito e ilustrado por Akira Toriyama. Fue publicado originalmente en la
+                    revista Shōnen Jump, de la editorial japonesa Shūeisha, entre 1984 y 1995.​</p>
+            </div>
+        </div>
+        <div class="items">
+            <div class="item">
+                <p class="name">Tokyo Ravengers</p>
+                <img class="img-resp" src="img/animeF8.jfif" alt="">
+                <p>Dragon Ball es un manga escrito e ilustrado por Akira Toriyama. Fue publicado originalmente en la
+                    revista Shōnen Jump, de la editorial japonesa Shūeisha, entre 1984 y 1995.​</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
