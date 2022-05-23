@@ -1335,6 +1335,43 @@ h2 {
 .effects .card:hover .back {
   transform: perspective(600px) rotateY(360deg);
 }
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+
+  100% {
+
+      transform: translateX(-3500px);
+  }
+}
+.sliderColl{
+  background-color: white;
+  
+}
+.sliderCol {
+  background: none;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.125);
+  margin: auto;
+
+  overflow: hidden;
+ 
+}
+@media(max-width:1280px){
+    .sliderCol{
+      height: 30vh;
+    }
+}
+.sliderCol .slide-track {
+  animation: scroll 20s linear infinite;
+  display: flex;
+}
+
+.sliderCol .slide {
+  height: 100%;
+  width: auto;
+}
 /* ----------------------------------------------Collections End--------------------------------------------- */
 
 /* ----------------------------------------------Exhibitions Start--------------------------------------------- */
