@@ -389,7 +389,7 @@ nav .fa {
     display: flex;
   }
   .card {
-    margin: 5px;
+    margin: 10px;
   }
 }
 
@@ -400,7 +400,7 @@ nav .fa {
     display: flex;
   }
   .card {
-    margin: 5px;
+    margin:15px;
   }
   .card img {
     max-width: 100%;
