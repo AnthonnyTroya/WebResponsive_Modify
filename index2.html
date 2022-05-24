@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap">
+<style>
+    /*Style  General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+h1 {
+  font-size: 46px;
+  font-weight: 800;
+  margin: 15px 0;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #2fb4cc;
+}
+
+p {
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+/* VIDEO BG */
+.cta-box {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  color: #fff;
+  margin: 50px 0;
+} /* VIDEO BG */
+.video-bg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+.video-bg:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  z-index: 1;
+  opacity: 0.85;
+}
+.video-bg video {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.content-section {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  padding: 220px 0;
+  position: relative;
+  background-size: cover !important;
+  background-position: center !important;
+}
+.content-section .container {
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 1280px) {
+  .content-section {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+  }
+  .video-bg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .video-bg:after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  .video-bg video {
+    min-width: 100%;
+    min-height: 100%;
+   
+  }
+  .cta-box {
+    font-size: 20px;
+  }
+}
+/* CTA BOX */
+.cta-box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+}
+.cta-box h6 {
+  width: 100%;
+  display: block;
+  font-weight: 200;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+.cta-box h2 {
+  width: 100%;
+  display: block;
+  color: rgb(255, 255, 255);
+  margin-bottom: 0;
+  font-size: 42px;
+  font-family: "Cinzel", serif;
+}
+.cta-box .custom-button {
+  margin: 0 auto;
+  margin-top: 20px;
+  color: rgb(255, 255, 255);
+}
+.cta-box .custom-button:hover {
+  color: #2fb4cc;
+}
+.cta-box .custom-button:hover:before {
+  border-color: #fff;
+}
+/* Cuerpo del Html */
+body {
+  background-color: #222;
+}
+
+/* Cabecera */
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(#517e86c4, #949fdf1a),
+    url(../img/onePiece.webp);
+  background-position: center;
+  background-color: #222;
+  background-size: cover;
+  position: relative;
+}
+
+/* Menu Nav Principal */
+nav {
+  background-image: linear-gradient(#000000c4, #0507137b);
+  display: flex;
+  padding: 1% 2%;
+  justify-content: space-between;
+  align-items: center;
+}
+/* -----------Logo----------- */
+nav .logo {
+  text-decoration: none;
+  font-size: 24px;
+  color: #fff3f3;
+  font-weight: bold;
+}
+
+nav .fab {
+  font-size: 42px;
+  /* color: #5236f4; */
+  color: #f82424;
+}
+/* -----------Links del menu----------- */
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  display: inline-block;
+  list-style: none;
+  padding: 8px 12px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f82424;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.text_box {
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text_box h2 {
+  font-size: 90px;
+  font-weight: 900;
+  color: #f82424ab;
+}
+
+.text_box #headtext {
+  font-size: 42px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: -1%;
+  margin-bottom: 1%;
+  color: #d49242;
+}
+
+.text_box p {
+  margin: 10px 0 40px;
+  font-size: 18px;
+  color: #ffff;
+}
+
+.hero_btn {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.hero_btn:hover {
+  background: #2fb4cc;
+  color: #fff;
+  transition: 1s;
+}
+
+nav .fa {
+  display: none;
+}
+
+/* Responsive Navbar Section Start */
+
+@media (max-width: 1280px) {
+  .text_box h2 {
+    font-size: 50px;
+  }
+  .text_box #headtext {
+    font-size: 23px;
+  }
+  .text_box p {
+    margin: 10px 40px;
+    font-size: 20px;
+  }
+  .nav-links ul li {
+    display: block;
+  }
+  .nav-links {
+    position: fixed;
+    background: #0a0202;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1.2s;
+  }
+  nav .fa {
+    display: block;
+    color: #ffff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .nav-links ul {
+    padding: 30px;
+  }
+}
+/* Responsive Navbar Section End */
+/* _------------------------------------_ */
+/* Programs Section Start */
+
+.Programs {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* cards */
+
+.container-card {
+  width: 100%;
+  display: flex;
+  max-width: 100%;
+  margin: auto;
+}
+
+.title-cards {
+  width: 100%;
+  max-width: 1080px;
+  margin: auto;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  color: #7a7a7a;
+}
+
+.card {
+  width: 100%;
+  margin: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgb(22, 22, 22);
+  box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.2);
+  transition: all 400ms ease-out;
+  cursor: default;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3%);
+}
+
+.card img {
+  width: 100%;
+  max-width: 100%;
+  height: 210px;
+  max-height: 100%;
+}
+
+.card .contenido-card {
+  padding: 15px;
+  text-align: center;
+}
+
+.card .contenido-card h3 {
+  margin-bottom: 15px;
+  color: #7a7a7a;
+}
+
+.card .contenido-card p {
+  line-height: 1.8;
+  color: #6a6a6a;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.card .contenido-card a {
+  display: inline-block;
+  padding: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #2fb4cc;
+  border: 1px solid #2fb4cc;
+  border-radius: 4px;
+  transition: all 400ms ease;
+  margin-bottom: 5px;
+}
+
+.card .contenido-card a:hover {
+  background: #2fb4cc;
+  color: #fff;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .container-card {
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+  }
+  .card {
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container-card {
+    flex-wrap: wrap;
+    width: 80%;
+    display: flex;
+  }
+  .card {
+    margin: 15px;
+  }
+  .card img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 24px;
+    line-height: unset;
+  }
+}
+/* Programs Section End */
+
+/* Campus Section Start */
+
+.campus {
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.campus .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+ .column {
+  flex: 100%;
+  max-width: 100%;
+}
+
+ .column img {
+  vertical-align: middle;
+}
+
+ .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+ .column img {
+  height: 100%;
+  width: 100%;
+}
+
+ .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: black;
+}
+
+.campus .container:hover .overlay {
+  opacity: 0.5;
+}
+
+.overlay .text  p{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* Tablet Styles */
+
+@media only screen and (min-width: 480px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+/* Desktop Styles */
+
+@media only screen and (min-width: 1024px) {
+  .column {
+    flex: 33.3%;
+    max-width: 33.3%;
+  }
+}
+/* Campus Section End */
+
+/* novedad Section Start */
+
+.novedad {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  max-width: 100%;
+}
+
+#correo {
+  width: 50%;
+  margin: auto;
+  max-width: 100%;
+}
+
+.form-nov p {
+  color: white;
+}
+
+.form-nov input[type="email"] {
+  width: 100%;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.input_check {
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.input_check label {
+  color: white;
+}
+
+.input_check a {
+  color: #2fb4cc;
+}
+
+.buttonform {
+  max-width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  width: 10%;
+  border-radius: 20px;
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+  font-size: 15px;
+}
+
+.buttonform:hover {
+  background-color: #24f8c7;
+  border: 1px solid black;
+}
+
+@media only screen and (max-width: 1024px) {
+  #correo {
+    width: 100%;
+    margin: auto;
+    max-width: 100%;
+  }
+  .form-nov input[type="email"] {
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+  }
+  .input_check {
+    width: 100%;
+  }
+  .input_check a {
+    font-size: 15px;
+  }
+  .buttonform {
+    width: 50%;
+  }
+}
+/* novedad Section End */
+
+/* comics Section Start */
+
+.comics {
+  max-width: 100%;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  background-color: white;
+}
+
+.container,
+.box,
+.titulo,
+.content,
+.redes-sociales {
+  width: 100%;
+  max-width: 100%;
+}
+
+.container {
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+  color: #505050;
+  line-height: 1.7;
+}
+
+.titulo {
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+.titulo h1 {
+  margin-bottom: 25px;
+  color: white;
+  letter-spacing: 2px;
+  font-family: fantasy;
+  background-color: black;
+}
+
+.content {
+  display: flex;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 55px;
+}
+
+.box figure {
+  width: 100%;
+  height: 250px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.box figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.redes-sociales {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(189, 32, 32, 0.7);
+  height: 0%;
+  line-height: 260px;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.box:hover .redes-sociales {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+.redes-sociales a {
+  text-decoration: none;
+  padding: 5px;
+  font-size: 22px;
+  color: #fbfbfb;
+  transition: all 400ms ease;
+}
+
+.redes-sociales a:hover {
+  color: #151012;
+}
+
+.box:hover h4 {
+  color: #e63e72;
+}
+/* Segundo Article */
+
+.comicsAs1 {
+  width: 100%;
+  max-width: 100%;
+  clear: both;
+  background-color: #222;
+}
+
+.titulo1 h1 {
+  background-color: black;
+  color: white;
+  font-family: fantasy;
+}
+
+.contentComic {
+  width: 50%;
+  float: right;
+}
+
+.contentComic p {
+  width: 80%;
+  margin: auto;
+  color: white;
+}
+
+.contentComic img {
+  width: 80%;
+  box-shadow: 10px 5px 5px black;
+}
+
+.contentComic1 {
+  width: 50%;
+}
+
+.contentComic1 p {
+  width: 80%;
+  margin: auto;
+  color: white;
+}
+
+.contentComic1 img {
+  width: 80%;
+  box-shadow: 10px 5px 5px black;
+}
+
+@media only screen and (max-width: 1024px) {
+  .content {
+    display: block;
+    width: 50%;
+    max-width: 100%;
+    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 55px;
+  }
+  .box figure {
+    width: 100%;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .box figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .redes-sociales {
+    position: absolute;
+    bottom: 0;
+    /*prueba tambien con top:0; y mira tu proyecto*/
+    left: 0;
+    background: rgba(189, 32, 32, 0.7);
+    height: 0%;
+    line-height: 260px;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .box:hover .redes-sociales {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+  }
+  .redes-sociales a {
+    text-decoration: none;
+    padding: 5px;
+    font-size: 22px;
+    color: #fbfbfb;
+    transition: all 400ms ease;
+  }
+  .redes-sociales a:hover {
+    color: #151012;
+  }
+  .box:hover h4 {
+    color: #e63e72;
+  }
+  .contentComic {
+    width: 100%;
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+  }
+  .contentComic1 {
+    width: 100%;
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+  }
+}
+/* comics Section End */
+
+/* Slider */
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider ul {
+  display: flex;
+  animation: cambio 20s infinite alternate linear;
+  width: 400%;
+}
+
+.slider li {
+  width: 100%;
+  list-style: none;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+}
+/* -----------Responsive Slider----------- */
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .slider,
+  .slider ul,
+  .slider img {
+    height: 100%;
+  }
+  .content-sec {
+    width: 100%;
+    height: 600px;
+    max-height: 600px;
+  }
+  .content-sec h1 {
+    padding: 10px;
+    font-size: 35px;
+  }
+  .content-sec p {
+    width: 100%;
+    font-size: 17px;
+  }
+  .content-sec #img-col {
+    width: 100%;
+    height: 30%;
+    margin: auto;
+  }
+}
+
+/* _------------------------------------_ */
+
+.cta {
+  width: 100%;
+  max-width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url(../img/black.webp);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  text-align: center;
+  padding: 200px;
+}
+
+.cta h1 {
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media (max-width: 1280px) {
+  .cta {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+      url(../img/black1.webp);
+    padding: 0;
+    background-position: center;
+  }
+  .cta h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .hero_btn {
+    display: inline-block;
+    padding: 12px 34px;
+    font-size: 13px;
+    margin: auto;
+  }
+}
+/* Call To Action Section End */
+/* Footer Section Start */
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  clear: both;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #cf3434;
+  font-weight: 600;
+}
+
+.footer a:hover {
+  color: #24f8c7;
+}
+
+.icons .fab {
+  color: #f43636;
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 20px 0;
+}
+
+.icons .fab:hover {
+  color: #2432f8;
+}
+
+.fa-heart {
+  color: #24f8c7;
+}
+
+hr {
+  border: 0.01px solid #7777772a;
+}
+</style>
+</head>
+
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html" class="logo">Anime
+                <i class="fab fa-d-and-d"></i>Museum
+            </a>
+            <div class="nav-links" id="navLinks">
+                <!-- reposnive bar open and close -->
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="visit.html">Visit</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="exhibitions.html">Exhibitions</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="fa fa-user" style="color: white;"><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+            <!-- reposnive bar open and close -->
+        </nav>
+
+
+        <div class="text_box">
+            <h2>Explora más</h2>
+            <p id="headtext">Visita Nuestro Museo</p>
+            <p>Todo sobre anime,comics y mangas.
+                <br> Estamos Ubicados en el centro de la ciudad de Pamplona
+            </p>
+            <a href="#" class="hero_btn">Visitanos</a>
+        </div>
+    </section>
+
+    <!-- Programs -->
+    <section class="Programs">
+        <h1>Más de <br> 1000000 Animes traducidos</h1>
+        <p>Nuestro Museo Contiene tantos animes traducidos para nuestros visitantes.</p>
+        <div class="container-card">
+            <div class="card">
+                <figure>
+                    <img src="img/anime5.jpg">
+                </figure>
+                <div class="contenido-card">
+                    <h3>Blue Period</h3>
+                    <p>Ensalza todo el trabajo que hay detrás de una pintura terminada. También derriba varios mitos
+                        como que el talento innato es lo único que importa.</p>
+                    <a href="#">Leer Màs</a>
+                </div>
+            </div>
+            <div class="card">
+                <figure>
+                    <img src="img/anime6.jpeg">
+                </figure>
+                <div class="contenido-card">
+                    <h3>A la altura</h3>
+                    <p> Esta es una impredecible y aterradora historia de supervivencia ambientada en edificios altos
+                        que no llegan al suelo.La protagonista, Yuri, decide sobrevivir para destruir este mundo ilógico
+                    </p>
+                    <a href="#">Leer Màs</a>
+                </div>
+            </div>
+            <div class="card">
+                <figure>
+                    <img src="img/anime7.jpg">
+                </figure>
+                <div class="contenido-card">
+                    <h3>Another</h3>
+                    <p>Considerado como el mejor anime de horror de todos los tiempos, 'Another' la trama gira en torno
+                        a 'Koichi' quien es nuevo en una ciudad en la que conoce a una misteriosa chica a la que
+                        extrañamente nadie puede ver u oír.</p>
+                    <a href="#">Leer Màs</a>
+                </div>
+            </div>
+            <div class="card">
+                <figure>
+                    <img src="img/anime8.jpg">
+                </figure>
+                <div class="contenido-card">
+                    <h3>Boku no Hero</h3>
+                    <p>Es una serie de manga escrita e ilustrada por Kōhei Horikoshi. Se basa en un one-shot realizado
+                        por el mismo autor y publicado en el quinto volumen del manga Ōmagadoki Dōbutsuen bajo el nombre
+                        de My Hero.​​ </p>
+                    <a href="#">Leer Màs</a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- Programs Section End -->
+
+    <!-- Campus Section Start-->
+    <section class="campus">
+        <!-- Image row 1 -->
+        <div class="row">
+            <div class="column">
+                <a href="#">
+                    <div class="container">
+                        <img src="img/luffy.webp" class="image">
+                        <div class="overlay">
+                            <div class="text"><p>Luffy-One Piece</p></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="column">
+                <a href="#">
+                    <div class="container">
+                        <img src="img/tanjiro.webp" class="image">
+                        <div class="overlay">
+                            <div class="text"><p>Tanjiro-Kimetsu no yaibai</p></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="column">
+                <a href="#">
+                    <div class="container">
+                        <img src="img/asta.jpg" class="image">
+                        <div class="overlay">
+                            <div class="text"><p>Asta-Black Clover</p></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- Image row 2 -->
+        <div class="row">
+            <div class="column">
+                <a href="#">
+                    <div class="container">
+                        <img src="img/natsu.jpg" class="image">
+                        <div class="overlay">
+                            <div class="text"><p>Natsu-Fairy Tail</p></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="column">
+                <a href="#">
+                    <div class="container">
+                        <img src="img/eren.webp" class="image">
+                        <div class="overlay">
+                            <div class="text"><p>Eren-Shingeki No Kyojing</p></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="column">
+                <a href="#">
+                    <div class="container">
+                        <img src="img/goku.jpg" class="image">
+                        <div class="overlay">
+                            <div class="text"><p>Goku-Dragon Ball Z</p></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- partial -->
+    </section>
+    <!-- Campus Section End -->
+
+
+    <!-- comics Section Start -->
+    <section class="comics">
+        <article class="comicsAs">
+            <div class="container">
+                <div class="titulo">
+                    <h1>Diferentes Paginas</h1>
+                    <p>Paginas para ver anime online con sus capitulos subtitulados, mangas,comprar comics etc.</p>
+                </div>
+                <div class="content">
+                    <div class="box">
+                        <figure>
+                            <img src="img/anime9.webp">
+                            <div class="redes-sociales">
+                                <a href="https://www3.animeflv.net/">AnimeFlv</a>
+                            </div>
+                        </figure>
+                        <div class="name">
+                            <h4>Anime</h4>
+                            <span>Pagina web subtitulada</span>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <figure>
+                            <img src="img/anime10.jfif">
+                            <div class="redes-sociales">
+                                <a href="inmanga.com">Inmanga</a>
+                            </div>
+                        </figure>
+                        <div class="name">
+                            <h4>Pagina de Manga</h4>
+                            <span>Encontraras todo tipo de manga</span>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <figure>
+                            <img src="img/comics.jpg">
+                            <div class="redes-sociales">
+                                <a href="https://www.casadellibro.com/libros/comics/411000000">Pagina de libros y
+                                    comics</a>
+                            </div>
+                        </figure>
+                        <div class="name">
+                            <h4>Pagina de comic</h4>
+                            <span>A todo tipo de precio</span>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <figure>
+                            <img src="img/funko.jpg">
+                            <div class="redes-sociales">
+                                <a
+                                    href="https://funkoeurope.com/?gclid=EAIaIQobChMI2arzpPjc9wIVR7rVCh3JXgLcEAAYASAAEgIn8PD_BwE">Funkos</a>
+                            </div>
+                        </figure>
+                        <div class="name">
+                            <h4>Funko Spain</h4>
+                            <span>Funko-pop a la venta</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+
+        <article class="comicsAs1">
+            <div class="titulo1">
+                <h1>Nuestro Blog</h1>
+            </div>
+            <div class="contentComic">
+                <div class="imageBlog">
+                    <img src="img/doctor.webp" alt="">
+                    <p>El enorme éxito de 'Doctor Strange en el multiverso de la locura' no ha evitado que la película
+                        de Sam Raimi haya recibido varias críticas, pero hay una especialmente recurrente. Mientras la
+                        veía ya pensaba que eso iba a pasar,
+                        pero también que yo estaba totalmente a favor de que Marvel apostase por ir en esa dirección.
+                    </p>
+                </div>
+            </div>
+
+            <div class="contentComic1">
+                <div class="imageBlog">
+                    <img src="img/redone.jpg" alt="">
+                    <p>One Piece Film: Red (ONE PIECE FILM RED Wan Pīsu Firumu Reddo?) es la 15ª película de One Piece,
+                        cuyo estreno está previsto para el 6 de agosto de 2022. La película se anunció por primera vez
+                        en el número del 21 de noviembre de
+                        2021 de la Weekly Shonen Jump en conmemoración del lanzamiento del episodio 1000.</p>
+                </div>
+            </div>
+        </article>
+
+    </section>
+    <hr>
+    <!-- comics Section End -->
+
+    <section class="header-content">
+        <div class="slider">
+            <ul>
+                <li>
+                    <img src="img/anime1.jpg">
+                </li>
+                <li>
+                    <img src="img/anime2.jpg">
+                </li>
+                <li>
+                    <img src="
+img/anime3.jpg">
+                </li>
+                <li>
+                    <img src="img/anime4.jpg">
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+    <!-- Novedad Section Start -->
+    <section class="novedad">
+        <h1>Quieres Recibir Nuestras Ultimas Novedades?</h1>
+
+        <div class="form-nov">
+            <p>Apuntate Para estar al día y no perderte ninguna novedad.</p>
+            <form action="troya1999.anthony@gmail.com">
+                <div id="correo">
+                    <input type="email" placeholder="Déjanos tu correo electronico" pattern=".+@globex\.com" required>
+                </div>
+
+                <div class="input_check">
+                    <label for=""> <input type="checkbox">
+                        He leído,comprendo y acepto la <a href="" target="_blank">Política de privacidad</a>
+                    </label>
+                    <div>
+                        <button type="submit" class="buttonform">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Novedad Section End -->
+    <!-- Call To Action Section Start -->
+    <section class="cta">
+        <div class="contencta">
+            <h1>Contacta con nosotros en un futuro</h1>
+            <a href="contact.html" class="hero_btn">Contactame</a>
+        </div>
+    </section>
+    <!-- Call To Action Section End -->
+
+    <!-- Footer Section Start -->
+    <footer class="footer">
+        <div class="icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linkedin"></i>
+        </div>
+        <p>Realizado por Anthonny Troya</a>
+        </p>
+        <p>Copyright © 2022 <a href="index.html">Explora nuestra pagina</a>. Derechos Reservados</p>
+    </footer>
+    <!-- Footer Section End -->
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
