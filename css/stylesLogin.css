@@ -120,7 +120,7 @@ h1 {
   height: 70vh;
   width: 100%;
   max-width: 100%;
-  background-image: url(img/anime16.jpg);
+  background-image: url(../img/anime16.jpg);
   background-position: center;
   background-size: cover;
   text-align: center;

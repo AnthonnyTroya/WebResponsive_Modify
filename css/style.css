@@ -26,20 +26,20 @@ p {
 /* VIDEO BG */
 .cta-box {
   width: 100%;
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
   color: #fff;
   margin: 50px 0;
-}
+} /* VIDEO BG */
 .video-bg {
   width: 100%;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
   position: absolute;
-  clear: both;
   left: 0;
   top: 0;
   overflow: hidden;
@@ -51,7 +51,7 @@ p {
   position: absolute;
   left: 0;
   top: 0;
-  background: #080808cf;
+  display: flex;
   z-index: 1;
   opacity: 0.85;
 }
@@ -60,11 +60,13 @@ p {
   min-height: 100%;
   position: absolute;
   left: 0;
+  background-image: url(../videos/animee.mp4);
   top: 0;
 }
 .content-section {
   width: 100%;
-  display: block;
+  max-width: 100%;
+  display: flex;
   padding: 220px 0;
   position: relative;
   background-size: cover !important;
@@ -75,13 +77,17 @@ p {
   z-index: 1;
 }
 @media (max-width: 1280px) {
+  .content-section {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+  }
   .video-bg {
     width: 100%;
     height: 100%;
     display: block;
   }
   .video-bg:after {
-    content: "";
     width: 100%;
     height: 100%;
     position: absolute;
@@ -89,10 +95,10 @@ p {
   .video-bg video {
     min-width: 100%;
     min-height: 100%;
+   
   }
-
-  .cta-box h2 {
-    font-size: 32px;
+  .cta-box {
+    font-size: 20px;
   }
 }
 /* CTA BOX */
@@ -107,7 +113,6 @@ p {
 .cta-box h6 {
   width: 100%;
   display: block;
-
   font-weight: 200;
   font-size: 20px;
   letter-spacing: 3px;
@@ -141,7 +146,7 @@ body {
   min-height: 100vh;
   width: 100%;
   background-image: linear-gradient(#517e86c4, #949fdf1a),
-    url(img/onePiece.webp);
+    url(../img/onePiece.webp);
   background-position: center;
   background-color: #222;
   background-size: cover;
@@ -400,7 +405,7 @@ nav .fa {
     display: flex;
   }
   .card {
-    margin:15px;
+    margin: 15px;
   }
   .card img {
     max-width: 100%;
@@ -866,7 +871,7 @@ nav .fa {
   width: 100%;
   max-width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-    url(img/black.webp);
+    url(../img/black.webp);
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -944,7 +949,7 @@ hr {
   height: 70vh;
   width: 100%;
   max-width: 100%;
-  background-image: url(img/anime11.jpg);
+  background-image: url(../img/anime11.jpg);
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -1050,8 +1055,7 @@ h2 {
   .Sub-header {
     width: 100%;
     max-width: 100%;
-
-    background-image: url(img/anime11.jpg);
+    background-image: url(../img/anime11.jpg);
   }
   .about-us {
     padding-bottom: 0;
@@ -1086,7 +1090,7 @@ h2 {
   height: 70vh;
   width: 100%;
   max-width: 100%;
-  background-image: url(img/anime12.jpg);
+  background-image: url(../img/anime12.jpg);
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -1263,7 +1267,7 @@ h2 {
   .Sub-headerC {
     width: 100%;
     max-width: 100%;
-    background-image: url(img/anime12.jpg);
+    background-image: url(../img/anime12.jpg);
   }
 
   .wrapper nav .items {
@@ -1379,7 +1383,7 @@ h2 {
   height: 70vh;
   width: 100%;
   max-width: 100%;
-  background-image: url(img/anime15.jpg);
+  background-image: url(../img/anime15.jpg);
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -1536,7 +1540,7 @@ h2 {
   .Sub-headerC {
     width: 100%;
     max-width: 100%;
-    background-image: url(img/anime15.jpg);
+    background-image: url(../img/anime15.jpg);
   }
 }
 
@@ -1714,7 +1718,7 @@ a {
   height: 70vh;
   width: 100%;
   max-width: 100%;
-  background-image: url(img/anime13.jfif);
+  background-image: url(../img/anime13.jfif);
   background-position: center;
   background-size: cover;
   text-align: center;
